@@ -12,10 +12,10 @@
 import { FormWithValidation } from "./FormWithValidation";
 
 const validationRules = {
-name: /^[a-zA-Z\s]{3,}$/,
+  name: /^[a-zA-Z\s]{3,}$/,
   email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-message: /^.{10,}$/,
-acceptRules: /true/,
+  message: /^.{10,}$/,
+  acceptRules: /true/,
 };
 
 <FormWithValidation validationRules={validationRules} />;
