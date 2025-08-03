@@ -1,0 +1,125 @@
+.form {
+    width: 600px;
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px 1px black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        & h2 {
+            font-size: 30px;
+        }
+        & p {
+            color: #a2a2a2;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &--inputs {
+            display: flex;
+            gap: 10px;
+
+            & input {
+                flex: 1;
+                height: 40px;
+                border-radius: 6px;
+                border: 3px solid #dbdbdb;
+                padding: 0 10px;
+                font-size: 15px;
+                outline: none;
+                transition: border 0.2s;
+
+                &:hover {
+                    border: 3px solid #a2a2a2;
+                }
+                &:focus {
+                    border: 3px solid rgb(142, 137, 207);
+                }
+                &.invalid {
+                    background-color: rgb(236, 187, 187);
+                    border: 3px solid rgb(223, 97, 97);
+                }
+            }
+        }
+        & textarea {
+            flex: 1;
+            border-radius: 6px;
+            border: 3px solid #dbdbdb;
+            padding: 10px;
+            font-size: 15px;
+            outline: none;
+            resize: none;
+            min-height: 150px;
+            transition: border 0.2s;
+
+            &:hover {
+                border: 3px solid #a2a2a2;
+            }
+            &:focus {
+                border: 3px solid rgb(142, 137, 207);
+            }
+            &.invalid {
+                border: 3px solid rgb(236, 78, 78);
+                background-color: rgb(236, 187, 187);
+            }
+        }
+    }
+    &__accept {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: #a2a2a2;
+
+        &--btn {
+            transition: color 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                color: black;
+            }
+        }
+        &.invalid {
+            color: rgb(236, 78, 78);
+        }
+    }
+    &__submit-btn {
+        background-color: black;
+        color: white;
+        height: 40px;
+        font-size: 15px;
+        border-radius: 6px;
+        outline: none;
+        font-weight: 500;
+        transition: background-color 0.2s;
+        border: none;
+        width: 150px;
+
+        &:disabled {
+            background-color: #a2a2a2;
+
+            &:hover {
+                cursor: not-allowed;
+                background-color: #a2a2a2;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #3b963e;
+        }
+    }
+}
+
+a {
+    color: inherit;
+}
